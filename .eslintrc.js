@@ -26,5 +26,6 @@ module.exports = {
     'comma-dangle': 'warn',
     'object-curly-spacing': 'warn',
     "react/prop-types": 'off',
+    'quote-props': 'off',
   },
 };
