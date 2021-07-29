@@ -1,4 +1,4 @@
-import {Grid, IconButton, makeStyles} from "@material-ui/core"
+import {Grid, IconButton, Link, makeStyles} from "@material-ui/core"
 import {Copyright, GitHub, Instagram, LinkedIn} from "@material-ui/icons"
 
 export const Footer = () => {
@@ -10,17 +10,24 @@ export const Footer = () => {
       justifyContent='center'
       className={styles.box}
     >
-      <IconButton >
-        <LinkedIn fontSize="large"/>
-      </IconButton>
+      <Link href='https://www.linkedin.com/in/syrgak-ravshanbek-uulu-bb43821ab/'>
+        <IconButton >
+          <LinkedIn fontSize="large"/>
+        </IconButton>
+      </Link>
 
-      <IconButton>
-        <Instagram fontSize="large"/>
-      </IconButton>
+      <Link href='https://www.instagram.com/s_yrga_k/'>
+        <IconButton>
+          <Instagram fontSize="large"/>
+        </IconButton>
+      </Link>
 
-      <IconButton>
-        <GitHub fontSize="large"/>
-      </IconButton>
+      <Link href='https://github.com/SyrgakRavshanbekUulu'>
+        <IconButton>
+          <GitHub fontSize="large"/>
+        </IconButton>
+      </Link>
+
       <Grid item xs={12}>
         <h2 style={{textAlign: 'center'}}>
           Syrgak Ravshanbek uulu &nbsp;
