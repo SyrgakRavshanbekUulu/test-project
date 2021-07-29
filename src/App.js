@@ -1,19 +1,15 @@
-import {About} from './components/about';
-import {Contacts} from './components/contacts';
-import {Footer} from './components/footer';
-import {Header} from './components/header';
-import {MainBlock} from './components/main'
-import {Projects} from './components/projects';
+import {Route, Switch} from 'react-router-dom';
+import {ContactsPage, HomePage, AboutPage, ProjectsPage} from './pages';
 
 function App() {
   return (
     <div>
-      <MainBlock />
-      <Header />
-      <About />
-      <Projects />
-      <Contacts />
-      <Footer />
+      <Switch>
+        <Route path='/' exact component={HomePage} />
+        <Route path='/about' exact component={AboutPage}/>
+        <Route path='/projects' exact component={ProjectsPage}/>
+        <Route path='/contacts' exact component={ContactsPage}/>
+      </Switch>
     </div>
   )
 }

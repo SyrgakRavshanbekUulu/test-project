@@ -10,7 +10,13 @@ export const Contacts = () => {
       direction="column"
       alignItems="center"
     >
-      <h1>Contacts</h1>
+      <h1>Контакты</h1>
+      <h3 style={{color: 'red', margin: 'auto'}}>
+        syrgakravshanbekuulu@gmail.com
+      </h3>
+      <h3 style={{color: 'red', margin: 'auto'}}>
+        +996 202 08-71-74
+      </h3>
       <h2>У вас есть вапросы?</h2>
       <form>
         <Grid
@@ -37,8 +43,7 @@ export const Contacts = () => {
 
 const useStyles = makeStyles({
   box: {
-    marginTop: '50px',
-    backgroundColor: '#2018a8',
+    margin: '50px',
     paddingBottom: '50px',
 
     '& > h1': {
