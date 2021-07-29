@@ -13,7 +13,6 @@ export const ProjectItem = (props) => {
   const [state, setState] = useState(false)
   const [styleBox, setStyleBox] = useState()
   const [open, setOpen] = useState(false)
-  console.log(open)
 
   useEffect(() => {
     setStyleBox(!state ? <RenderBox /> : <RenderBoxHover />)
@@ -44,7 +43,11 @@ export const ProjectItem = (props) => {
           <Slide in={open}>
             <Paper elevation={3}
               style={{width: '80%', margin: 'auto', marginTop: '10%'}}>
-              <Grid container justifyContent="space-around">
+              <Grid
+                container
+                justifyContent="space-around"
+                className={styles.modalImg}
+              >
                 <Grid item>
                   <img src={props.img.home} className={styles.img}/>
                   <h4>{props.label.home}</h4>
@@ -89,13 +92,14 @@ const box = {
   marginTop: '40px',
   borderRadius: '10px',
   textAlign: 'center',
+  marginRight: '20px',
 }
 const useStyles = makeStyles({
   box: {
     ...box,
     border: 'solid 2px blue',
     '& > img': {
-      paddingTop: '45px',
+      borderRadius: '10px',
     },
 
   },
@@ -111,8 +115,15 @@ const useStyles = makeStyles({
     },
   },
   img: {
-    width: '300px',
-    height: '300px',
+    width: '400px',
+    height: '400px',
     objectFit: 'cover',
+    borderRadius: '10px',
+  },
+  modalImg: {
+    '& > div': {
+      margin: '20px 10px',
+      textAlign: 'center',
+    },
   },
 })

@@ -1,4 +1,5 @@
 import {Button, Grid, makeStyles} from "@material-ui/core"
+import {Link} from "react-router-dom"
 export const MainBlock = () => {
   const styles = useStyles()
 
@@ -12,13 +13,16 @@ export const MainBlock = () => {
           I am Frontend React Js/Typecsript developer.
         </h1><br />
         <Grid item container xs={12} justifyContent="center">
-          <Button
-            variant="outlined"
-            color="secondary"
-            size="large"
-          >
-            View my work
-          </Button>
+          <Link to='/projects' style={{textDecoration: 'none'}}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="large"
+            >
+              View my work
+            </Button>
+          </Link>
+
         </Grid>
       </Grid>
 
@@ -28,10 +32,22 @@ export const MainBlock = () => {
 }
 
 const useStyles = makeStyles({
+  '@keyframes bgcolor': {
+    '0%': {
+      backgroundColor: '#2018a8',
+    },
+    '50%': {
+      backgroundColor: '#47E42F',
+    },
+    '100%': {
+      backgroundColor: '#E1E42F',
+    },
+  },
   main: {
     alignItems: 'center',
     height: '100vh',
     background: '#2018a8',
+    animation: '$bgcolor 4s infinite',
   },
   text: {
     marginBottom: '40px',
