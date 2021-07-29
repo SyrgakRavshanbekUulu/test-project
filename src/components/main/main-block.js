@@ -10,7 +10,7 @@ export const MainBlock = () => {
         <h1 className={styles.text}>
           Hello, I am
           <span className={styles.name}> Syrgak Ravshanbek uulu</span>.<br />
-          I am Frontend React Js/Typecsript developer.
+          I am Frontend React Js/Typescript developer.
         </h1><br />
         <Grid item container xs={12} justifyContent="center">
           <Link to='/projects' style={{textDecoration: 'none'}}>
